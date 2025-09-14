@@ -272,6 +272,7 @@ img{
 }
 
 .education-header time {
+    text-align: right;
     font-style: italic;
     color: gray;
 }
@@ -354,4 +355,83 @@ img{
 
 .btn-github:hover {
     background-color: #444c56;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .navbar-container {
+        flex-direction: flex;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .navbar-content {
+        flex-direction: row;
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .home {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .main-image {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .image-item:nth-child(2) {
+        grid-row: auto;
+        grid-column: auto;
+    }
+
+    .projects-content {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .projects-card {
+        font-size: 12px;
+        padding: 15px;
+    }
+
+    .projects-card-article {
+        font-size: 12px;
+    }
+
+    .education-header h3 {
+        padding-right: 5px;
+    }
+}
+
+@media (max-width: 350px) {
+    .navbar-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 900px) {
+.container {
+    padding: 20px 40px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.navbar-container {
+    gap: 20px;
+}
+
+.projects-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
 }
